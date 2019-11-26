@@ -13,6 +13,7 @@
 
     - name: include snmp pfc counter test
       include_tasks: roles/test/tasks/snmp/pfc_counters.yml
+      when: hwsku != 'et6448m'
 
     - name: include snmp queues test
       include_tasks: roles/test/tasks/snmp/queues.yml 
